@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Add your custom styles for the login page here */
     .user-info-box {
       display: none;
       background-color: #f9f9f9;
@@ -58,33 +57,33 @@
     #uploadBtn {
       margin-top: 10px;
     }
-    /* Adjusted styles for the photo above the right image */
+   
     .photo-above-right {
-  width: 30%; /* Adjust the width as needed */
-  max-width: 320px; /* Set maximum width to prevent overflow */
+  width: 30%;
+  max-width: 320px; 
   height: auto;
   border: 5px solid #b7b1b1;
   border-radius: 5px;
   position: absolute;
   top: 10%;
-  right: 5%; /* Adjust the right position */
+  right: 5%; 
   }
 
   .photo-above-left {
-    width: 30%; /* Adjust the width as needed */
-    max-width: 320px; /* Set maximum width to prevent overflow */
+    width: 30%; 
+    max-width: 320px; 
     height: auto;
     border: 5px solid #b7b1b1;
     border-radius: 5px;
     position: absolute;
     top: 9%;
-    left: 5%; /* Adjust the left position */
+    left: 5%; 
   }
 
-  /* Adjusted styles for side images */
+  
   .side-image {
-    width: 25%; /* Adjust the width as needed */
-    max-width: 300px; /* Set maximum width to prevent overflow */
+    width: 25%;
+    max-width: 300px; 
     border: 5px solid #b7b1b1;
     border-radius: 5px;
     height: auto;
@@ -92,27 +91,27 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  /* Adjusted alignment of side images */
+
   .left-image {
-    left: 5%; /* Adjust the left position */
+    left: 5%;
   }
 
   .right-image {
-    right: 5%; /* Adjust the right position */
+    right: 5%; 
   }
 
-  /* Adjusted font size for centered text */
+ 
   .text-center h2 {
-    font-size: 40px; /* Adjust the font size as needed */
+    font-size: 40px; 
   }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <!-- Left Image -->
+ 
   <img src="https://www.sixt.com/magazine/wp-content/uploads//sites/6/2022/04/Bugatti-Bolide-Hypercar-resize-1024x683.jpg" class="side-image left-image" alt="Left Image">
-  <!-- Photo above the left image -->
+ 
   <img src="https://m.media-amazon.com/images/M/MV5BMzMwYWZkZjctZTU5Ny00MDNiLTlkMmYtNzkyODMwMGUxYzA2XkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_.jpg" class="photo-above-left" alt="Photo Above Left">
   <h2 class="text-center">Login Here </h2>
   <form id="loginForm">
@@ -135,7 +134,7 @@
   </form>
   <div id="loginMessage" class="text-center" style="margin-top: 10px;"></div>
   
-  <!-- the user information box -->
+ 
   <div id="userInfoBox" class="user-info-box">
     <h3>User Information: </h3>
     <p><strong>Email:</strong> <span id="userInfoEmail"></span></p>
@@ -143,15 +142,15 @@
     <p><strong>Role:</strong> <span id="userInfoRole"></span></p>
   </div>
 
-  <!-- the customer invoice box -->
+
 <div id="customerInvoiceBox" class="customer-invoice-box">
-  <h3>Customer Invoice: </h3> <!-- the header  -->
-  <p>Enter Invoice ID Number</p>   <!-- the place where they enter the id nmumber -->
+  <h3>Customer Invoice: </h3> 
+  <p>Enter Invoice ID Number</p>  
   <label for="Invoice">Invoice:</label>   
   <input type="invoice" id="Invoice" placeholder="Enter invoice number">
-  <button onclick="submitInvoice()">Submit</button> <!-- the customer invoice box button to submit -->
+  <button onclick="submitInvoice()">Submit</button> 
 
-  <!--below is what prints the user information to the customer information box and sets the size: -->
+ 
   <div id="invoiceInfo" style="margin-top: 20px;"></div>  
 </div>
 
@@ -231,14 +230,14 @@
 <script>
   $(document).ready(function(){
     $("#loginForm").submit(function(e){
-        e.preventDefault(); // Prevent form submission
+        e.preventDefault();
         var email = $("#email").val();
         var password = $("#password").val();
         var loginType = $("#loginType").val();
 
-        // For simplicity, check if email and password are not empty
+        
         if(email && password) {
-            // Make an AJAX request to the server to authenticate the user
+            
             $.ajax({
                 url: "/login",
                 method: "POST",
@@ -363,7 +362,7 @@
   
 
 </div>
-
+<!--ON JESUS CHRIST I DESERVE A COOKIE FOR HOW I READ THE DATA-->
 <script>
   // Function to fetch the data from vehicle table of data and display it in its window
   function fetchAndDisplayVehicleData() 
@@ -376,7 +375,7 @@
           var vehicleDataBody = $("#vehicleDataBody");
           // Clear previous data
           vehicleDataBody.empty();
-          // Populate table rows with vehicle data
+          // add table rows with vehicle data
           response.forEach(function(vehicle) {
             var row = "<tr>";
             row += "<td>" + vehicle.vin_number + "</td>";
@@ -387,27 +386,27 @@
             row += "</tr>";
             vehicleDataBody.append(row);
           });
-          // Show the vehicle data window
+          // Show the vehicle data window by using the slide down for sexiness
           $("#vehicleDataWindow").slideDown();
         } else {
-          // No vehicle data available
+          
           console.log("No vehicle data available.");
         }
       },
       error: function(xhr, status, error) {
-        // Error handling
+        
         console.error("Error fetching vehicle data:", error);
       }
     });
   }
   function fetchAndDisplayMechanicData() {
     $.ajax({
-      url: "/fetch_mechanic_data", // Update the URL to match your backend route
+      url: "/fetch_mechanic_data",
       method: "GET",
       success: function(response) {
         if (response && response.length > 0) {
           var mechanicDataBody = $("#mechanicDataBody");
-          mechanicDataBody.empty(); // Clear previous data
+          mechanicDataBody.empty(); 
           response.forEach(function(mechanic) {
             var row = "<tr>";
             row += "<td>" + mechanic.mechanic_id + "</td>";
@@ -417,7 +416,7 @@
             row += "</tr>";
             mechanicDataBody.append(row);
           });
-          $("#mechanicDataWindow").slideDown(); // Show the mechanic data window
+          $("#mechanicDataWindow").slideDown();
         } else {
           console.log("No mechanic data available.");
         }
@@ -427,20 +426,20 @@
       }
     });
   }
-  // Check if the user is signed in as an employee before showing the vehicle data window
+  
   $("#vehicleDataWindow").hide(); // Hide the window initially
-  // Hide the mechanic data window initially
+
   $("#mechanicDataWindow").hide();
 
   $("#loginForm").submit(function(e){
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); 
     var email = $("#email").val();
     var password = $("#password").val();
     var loginType = $("#loginType").val();
 
-    // For simplicity, check if email and password are not empty
+    
     if(email && password) {
-        // Make an AJAX request to the server to authenticate the user
+        
         $.ajax({
             url: "/login",
             method: "POST",
@@ -450,26 +449,26 @@
                 loginType: loginType
             },
             success: function(response) {
-                // Handle the response from the server
+               
                 $("#loginMessage").text(response);
                 if (response === "Login successful") {
-                    // Display user information box
+                   
                     $("#userInfoEmail").text(email);
-                    $("#userInfoName").text("Machew Kilpatrick"); // Example name
+                    $("#userInfoName").text("Machew Kilpatrick"); 
                     $("#userInfoRole").text(loginType);
                     $("#userInfoBox").slideDown();
 
-                    // Display additional information box
-                    $("#additionalInfoID").text("00512831"); // Example ID
-                    $("#additionalInfoAge").text("21"); // Example age
-                    $("#additionalInfoPhoneNumber").text("9-1-1"); // Example phone number
-                    $("#additionalInfoAddress").text("20 Beacons Way"); // Example address
-                    $("#additionalInfoDOB").text("September 11, 2001"); // Example date of birth
+                    
+                    $("#additionalInfoID").text("00512831");
+                    $("#additionalInfoAge").text("21");
+                    $("#additionalInfoPhoneNumber").text("9-1-1"); 
+                    $("#additionalInfoAddress").text("20 Beacons Way"); 
+                    $("#additionalInfoDOB").text("September 11, 2001"); 
                     $("#additionalInfoBox").slideDown();
 
-                    // Check if the user is signed in as an employee
+                    
                     if (loginType === "employee") {
-                        // Call the function to fetch and display vehicle data
+                        
                         fetchAndDisplayVehicleData();
                         fetchAndDisplayMechanicData();
                     }
@@ -482,7 +481,7 @@
                 }
             },
             error: function(xhr, status, error) {
-                // Handling errors, if any
+               
                 console.error(error);
             }
         });
@@ -510,4 +509,3 @@
 </footer>
 </body>
 </html>
-
