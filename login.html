@@ -9,7 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    .user-info-box {
+    .user-info-box 
+    {
       display: none;
       background-color: #f9f9f9;
       border: 7px solid #ca2f96;
@@ -17,14 +18,28 @@
       padding: 10px;
       margin-top: 20px;
     }
-    .dataWindow{
+    .dataWindow
+    {
       border: 7px solid #ca2f96;
       border-radius: 5px;
       padding: 10px;
       margin-bottom : 20px;
       
     }
-    .foot_user-info-box {
+    .trackhawk
+    {
+      width: 20%;
+      /* max-width: 300px;  */
+      border: 5px solid #ca2f96;
+      border-radius: 5px;
+      
+      position: absolute;
+      top: 16%;
+      transform: translateY(100%);
+
+    }
+    .foot_user-info-box 
+    {
       display: none;
       background-color: #ca2f96;
       border: 7px solid #ca2f96;
@@ -40,7 +55,8 @@
       padding: 10px;
       margin-top: 20px;
     }
-    .file-preview-box {
+    .file-preview-box 
+    {
       display: none;
       background-color: #f9f9f9;
       border: 7px solid #ca2f96;
@@ -70,7 +86,7 @@
   width: 30%;
   max-width: 320px; 
   height: auto;
-  border: 5px solid #b7b1b1;
+  border: 5px solid #ca2f96;
   border-radius: 5px;
   position: absolute;
   top: 10%;
@@ -81,7 +97,7 @@
     width: 30%; 
     max-width: 320px; 
     height: auto;
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     position: absolute;
     top: 9%;
@@ -90,7 +106,7 @@
   .side-image2 {
     width: 17%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -100,7 +116,7 @@
   .side-image3 {
     width: 20%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -110,7 +126,7 @@
   .side-image4 {
     width: 20%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -120,7 +136,7 @@
   .side-image5 {
     width: 20%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -130,7 +146,7 @@
   .side-image6 {
     width: 20%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -140,7 +156,7 @@
   .side-image7 {
     width: 20%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -150,7 +166,7 @@
   .side-image8 {
     width: 21.4%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -160,7 +176,7 @@
   .side-image9 {
     width: 21.4%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -170,7 +186,7 @@
   .side-image10 {
     width: 21.4%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -180,7 +196,7 @@
   .side-image11 {
     width: 21.4%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -190,7 +206,7 @@
   .side-image12 {
     width: 21.4%;
     /* max-width: 300px;  */
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -203,7 +219,7 @@
   .side-image {
     width: 25%;
     max-width: 300px; 
-    border: 5px solid #b7b1b1;
+    border: 5px solid #ca2f96;
     border-radius: 5px;
     height: auto;
     position: absolute;
@@ -349,7 +365,7 @@
   <div id="filePreviewBox" class="file-preview-box"></div> -->
 
   <!-- The images sources for the car pictures on the the login in screen -->
-  <img src="https://cdn.motor1.com/images/mgl/ZnmO23/s1/future-cars-2023-2026.jpg" class="side-image right-image" alt="Bottom Right Image"> <!--this is the bottom right image -->
+  <img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2022/10/1150-HP-Jeep-Grand-Cherokee-Trackhawk.jpg" class="trackhawk right-image" alt="Bottom Right Image"> <!--this is the bottom right image -->
 
 
   <img src="https://www.sixt.com/magazine/wp-content/uploads//sites/6/2022/04/Bugatti-Bolide-Hypercar-resize-1024x683.jpg" class="side-image left-image" alt=" Bottom Left Image"> <!--this is the top right image-->
@@ -455,6 +471,7 @@
 
 </script> 
 <div class="container">
+  <!-- <img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2022/10/1150-HP-Jeep-Grand-Cherokee-Trackhawk.jpg" class="photo-adjacent-logo" alt="Left Image 1">  -->
   <img src="https://bringatrailer.com/wp-content/uploads/2023/11/2021_dodge_challenger-srt-hellcat-redeye-widebody_2021_dodge_challenger-srt-hellcat-redeye-widebody_a003b6a8-f450-48eb-92fe-3b5243947c2a-gpQvkX-78677-78679-scaled.jpg" class="side-image2 left-image" alt="Left Image 1">
   <img src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2016/11/2017-Chevrolet-Camaro-ZL1-102.jpg" class="side-image3 right-image" alt="Left Image 2">
   <img src="https://i1.wp.com/thisis50.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-01-at-3.34.10-PM.png?fit=1200%2C594&ssl=1" class="side-image4 left-image" alt="Right Image 1">
