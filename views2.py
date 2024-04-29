@@ -57,7 +57,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_CustomerInfo)
+# printQueries(sql_queries_CustomerInfo)
 selected_query7 = "SELECT * from CustomerInfo ORDER BY cust_lname" 
 
 def fetch_CustomerInfo_data():
@@ -91,7 +91,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_invoiceHistory)
+# printQueries(sql_queries_invoiceHistory)
 selected_query6 = "SELECT * from invoiceHistory" 
 
 def fetch_invoiceHistory_data():
@@ -125,7 +125,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_StaffCalendar)
+# printQueries(sql_queries_StaffCalendar)
 selected_query5 = "SELECT * from StaffCalendar WHERE date_worked = '4172024'" 
 
 def fetch_StaffCalendar_data():
@@ -158,7 +158,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_ServiceSchedule)
+# printQueries(sql_queries_ServiceSchedule)
 selected_query4 = "SELECT * from ServiceSchedule" 
 
 def fetch_ServiceSchedule_data():
@@ -190,7 +190,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_MechanicInfo)
+# printQueries(sql_queries_MechanicInfo)
 selected_query = 'SELECT * from MechanicInfo ORDER BY mech_lname' 
 def fetch_mechanic_data():
     connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
@@ -227,7 +227,7 @@ def printQueries(list = []):
     for data in list:
         print(f"{x+1}. {data}")
         x += 1 
-printQueries(sql_queries_Salesperson)
+# printQueries(sql_queries_Salesperson)
 selected_query2 = 'SELECT * from Salesperson ORDER BY salesperson_id LIMIT 3' 
 def fetch_Salesperson_data():
     connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
