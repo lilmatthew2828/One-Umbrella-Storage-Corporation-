@@ -61,7 +61,7 @@ def printQueries(list = []):
 selected_query7 = "SELECT * from CustomerInfo ORDER BY cust_lname" 
 
 def fetch_CustomerInfo_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query7, connection)
     connection.close()
     return data_frame
@@ -95,7 +95,7 @@ def printQueries(list = []):
 selected_query6 = "SELECT * from invoiceHistory" 
 
 def fetch_invoiceHistory_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query6, connection)
     connection.close()
     return data_frame
@@ -129,7 +129,7 @@ def printQueries(list = []):
 selected_query5 = "SELECT * from StaffCalendar WHERE date_worked = '4172024'" 
 
 def fetch_StaffCalendar_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query5, connection)
     connection.close()
     return data_frame
@@ -162,7 +162,7 @@ def printQueries(list = []):
 selected_query4 = "SELECT * from ServiceSchedule" 
 
 def fetch_ServiceSchedule_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query4, connection)
     connection.close()
     return data_frame
@@ -193,7 +193,7 @@ def printQueries(list = []):
 # printQueries(sql_queries_MechanicInfo)
 selected_query = 'SELECT * from MechanicInfo ORDER BY mech_lname' 
 def fetch_mechanic_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query, connection)
     connection.close()
     return data_frame
@@ -230,7 +230,7 @@ def printQueries(list = []):
 # printQueries(sql_queries_Salesperson)
 selected_query2 = 'SELECT * from Salesperson ORDER BY salesperson_id LIMIT 3' 
 def fetch_Salesperson_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     data_frame = pandas.read_sql(selected_query2, connection)
     connection.close()
     return data_frame
@@ -264,7 +264,7 @@ sql_queries_Services_Inventory = [
 
 selected_query3 = "SELECT * from Services_and_Inventory;"
 def fetch_Services_Inventory():
-     connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+     connection = sqlite3.connect('SQL_Database.db')
      data_frame = pandas.read_sql(selected_query3, connection)
      connection.close()
      return data_frame
@@ -286,7 +286,7 @@ sql_queries_vehicles = [
     "SELECT DISTINCT vin_number FROM Vehicles;",
     "SELECT COUNT(*) FROM Vehicles;"]
 def fetch_vehicle_data():
-    connection = sqlite3.connect('/Users/machew/PycharmProjects/firstpythoncode/pythonProject/pandas-cookbook-master/sqlite (2).db')
+    connection = sqlite3.connect('SQL_Database.db')
     dataframe_example = pandas.read_sql("SELECT * from Vehicles", connection)
     connection.close()
     return dataframe_example
