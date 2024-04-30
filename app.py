@@ -3,7 +3,7 @@ import pandas
 import numpy
 from views2 import views
 import sqlite3
-
+"This is new from typing in github"
 
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/")
