@@ -3,7 +3,12 @@ import pandas
 import numpy
 from views2 import views
 import sqlite3
-"This is new from typing in github"
+'''
+In order to end a port in pycharm: 
+open terminal and type this
+1. lsof -i :9000
+2. kill -9 [PID with no brackets]
+'''
 
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/")
