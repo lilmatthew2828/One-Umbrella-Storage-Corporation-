@@ -2,8 +2,8 @@ from flask import Flask
 import pandas
 import numpy
 from views2 import views
+import sqlite3
 
-# This is newdddd
 
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/")
